@@ -1,6 +1,11 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/format.json)](https://github.com/astral-sh/ruff_format)
 
+
+App is deployed to streamlit cloud:
+https://linking-prepositions.streamlit.app/
+
+
 # Development
 
 ## Install dev requirements

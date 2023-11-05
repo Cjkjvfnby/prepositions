@@ -17,10 +17,11 @@ from prepositions._prepositions import (
     relations,
 )
 
-# Sky Blue #89ABE3
-_COLOR_RU = (0x89, 0xAB, 0xE3)
-# Bubblegum Pink #EA738D
-_COLOR_FR = (0xEA, 0x73, 0x8D)
+# https://docs.streamlit.io/library/api-reference/text/st.markdown
+# Streamlit blue
+_COLOR_RU = (0, 104, 201)
+# Streamlit orange
+_COLOR_FR = (217, 90, 0)
 
 
 def _make_node(

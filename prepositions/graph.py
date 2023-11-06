@@ -53,13 +53,13 @@ def _make_node(
     return Node(**kwargs)
 
 
-def get_preposition_graph() -> Any:
+def get_preposition_graph(screen_width: int, screen_height: int) -> Any:
     """
     Return a graph with prepositions.
     """
     config = Config(
-        height=800,
-        width=700,
+        height=screen_height,
+        width=screen_width,
         nodeHighlightBehavior=True,
         highlightColor="#000000",
         directed=False,

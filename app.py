@@ -10,4 +10,5 @@ fr_header = ":orange[La liaison entre les prépositions russes et françaises]"
 
 st.header(f"{ru_header} / {fr_header}")
 
-get_preposition_graph()
+
+get_preposition_graph(700, 800)

@@ -53,7 +53,11 @@ def _make_node(
     return Node(**kwargs)
 
 
-def get_preposition_graph(screen_width: int, screen_height: int) -> Any:
+def get_preposition_graph(
+    prepositions: list[Preposition],
+    screen_width: int,
+    screen_height: int,
+) -> Any:
     """
     Return a graph with prepositions.
     """
@@ -66,9 +70,11 @@ def get_preposition_graph(screen_width: int, screen_height: int) -> Any:
         collapsible=True,
     )
 
+    triggered_relations = [r for r in relations if r.ru in prepositions]
+
     nodes_raw: dict[Preposition, list[tuple[RuExample, FrExample]]] = {}
 
-    for relation in relations:
+    for relation in triggered_relations:
         nodes_raw.setdefault(relation.ru, []).extend(relation.examples)
         nodes_raw.setdefault(relation.fr, []).extend(relation.examples)
 

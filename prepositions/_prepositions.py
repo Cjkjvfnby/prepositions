@@ -25,6 +25,9 @@ class Preposition(NamedTuple):
     lang: Lang
     preposition: str
 
+    def __str__(self):
+        return self.preposition
+
 
 class Relation(NamedTuple):
     ru: Preposition
@@ -49,13 +52,15 @@ def _relations(
 для = Preposition(Lang.RU, "для")
 из = Preposition(Lang.RU, "из")
 за = Preposition(Lang.RU, "за")
-за = Preposition(Lang.RU, "за")
 как = Preposition(Lang.RU, "как")
 
 
 à = Preposition(Lang.FR, "à")
 dans = Preposition(Lang.FR, "dans")
 en = Preposition(Lang.FR, "en")
+
+
+ru_prepositions = [в, на, к, с, до, по, для, из, за, как]
 
 
 relations = [
@@ -76,3 +81,7 @@ relations = [
     ),
     _relations(как, en, ("Он вёл себя как тиран", "Il a agi en tyran.")),
 ]
+
+ru_map: dict[Preposition, list[Preposition]] = {}
+for r in relations:
+    ru_map.setdefault(r.ru, []).append(r.fr)

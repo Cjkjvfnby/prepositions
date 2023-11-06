@@ -79,7 +79,8 @@ relations = [
         en,
         ("Он предпочитает путешествовать на поезде", "Il préfère voyager en train"),
     ),
-    _relations(как, en, ("Он вёл себя как тиран", "Il a agi en tyran.")),
+    _relations(как, en, ("Он вёл себя как тиран", "Il a agi en tyran")),
+    _relations(к, à, ("пойду к окну", "j'irai à la fenêtre")),
 ]
 
 ru_map: dict[Preposition, list[Preposition]] = {}

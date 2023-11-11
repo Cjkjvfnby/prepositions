@@ -58,6 +58,7 @@ def _relations(
 à = Preposition(Lang.FR, "à")
 dans = Preposition(Lang.FR, "dans")
 en = Preposition(Lang.FR, "en")
+de = Preposition(Lang.FR, "de")
 
 
 ru_prepositions = [в, на, к, с, до, по, для, из, за, как]
@@ -81,6 +82,8 @@ relations = [
     ),
     _relations(как, en, ("Он вёл себя как тиран", "Il a agi en tyran")),
     _relations(к, à, ("пойду к окну", "j'irai à la fenêtre")),
+    _relations(из, de, ("Мы прибываем из Лиля", "Nous arrivons de Lille")),
+    _relations(с, de, ("суп с помидорами", "la soupe de tomates")),
 ]
 
 ru_map: dict[Preposition, list[Preposition]] = {}

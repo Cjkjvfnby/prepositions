@@ -11,6 +11,7 @@ ignore = [
     "ANN101", "ANN204", "ANN401",
     "D104", # no docstring in public package
     "D200", # One-line docstring should fit on one line with quotes
+    "D107", # No docstring in __init__
     "D212",
     "RSE102",
     "D203",
@@ -18,7 +19,7 @@ ignore = [
     "G004", # logging with f string is ok
     "ISC001", "COM812" # handled by ruff formatter
 ]
-target-version = "py39"
+target-version = "py311"
 
 [tool.ruff.per-file-ignores]
 "__init__.py" = ["F401"]

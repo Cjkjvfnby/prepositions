@@ -106,7 +106,7 @@ def get_preposition_graph(
             color=_COLOR_FR if prep.lang == FR else _COLOR_RU,
         )
 
-    for r in relations:
+    for r in triggered_relations:
         title = "\n".join(
             f"{_wrap_example(ru_ex, _COLOR_RU)} / {_wrap_example(fr_ex, _COLOR_FR)}\n"
             for ru_ex, fr_ex in r.examples

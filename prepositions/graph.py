@@ -107,7 +107,10 @@ def get_preposition_graph(
         )
 
     for r in relations:
-        title = "\n".join(f"{ru_ex} / {fr_ex}\n" for ru_ex, fr_ex in r.examples)
+        title = "\n".join(
+            f"{_wrap_example(ru_ex, _COLOR_RU)} / {_wrap_example(fr_ex, _COLOR_FR)}\n"
+            for ru_ex, fr_ex in r.examples
+        )
 
         nt.add_edge(r.ru.preposition, r.fr.preposition, title=title)
 

@@ -43,8 +43,18 @@ prepositions = st.sidebar.multiselect(
 )
 
 
-source_code = get_preposition_graph(
-    relations, selected_prepositions=prepositions, screen_height=600
+value = st.sidebar.slider(
+    "height",
+    key="screen_height",
+    min_value=500,
+    max_value=1000,
+    value=600,
+    step=50,
+    help="Screen height",
 )
 
-components.html(source_code, height=600)
+source_code = get_preposition_graph(
+    relations, selected_prepositions=prepositions, screen_height=value
+)
+
+components.html(source_code, height=value)

@@ -84,6 +84,7 @@ def get_preposition_graph(
         width="100%",
         notebook=True,
         neighborhood_highlight=True,
+        cdn_resources="in_line",
     )
     triggered_relations = [
         r for r in relations if r.ru.preposition in selected_prepositions
@@ -99,7 +100,7 @@ def get_preposition_graph(
 
         nt.add_node(
             prep.preposition,
-            size=20,
+            size=25,
             title=title,
             label="",
             shape="ellipse",
@@ -114,4 +115,4 @@ def get_preposition_graph(
 
         nt.add_edge(r.ru.preposition, r.fr.preposition, title=title)
 
-    return StringIO(nt.generate_html(notebook=True)).getvalue()
+    return StringIO(nt.generate_html(notebook=False)).getvalue()

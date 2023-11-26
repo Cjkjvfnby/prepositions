@@ -1,4 +1,4 @@
-# ruff: noqa: F401, RUF001  # non English alphabet is used intentionally
+# ruff: noqa: RUF001  # non English alphabet is used intentionally
 """
 Preposition database.
 
@@ -9,7 +9,7 @@ TODO replace with data markup language.
 """
 
 from collections.abc import Iterable, Sequence
-from typing import Any, NamedTuple, NewType
+from typing import NamedTuple, NewType
 
 RuExample = str
 FrExample = str
@@ -39,58 +39,44 @@ class Relation(NamedTuple):
     examples: Sequence[tuple[RuExample, FrExample]]
 
 
-def _relations(
-    ru: Preposition,
-    fr: Preposition,
-    *examples: tuple[RuExample, FrExample],
-) -> Relation:
-    return Relation(ru, fr, examples)
+data = {
+    "в": {
+        "dans": {"Положите книги *в* коробку": "Mets les livres *dans* le carton"},
+        "en": {"Он живёт *в* Провансе": "Il habite *en* Provence"},
+        "à": {"Мы собираемся *в* Ницу": "Nous allons *à* Nice"},
+    },
+    "для": {"à": {"бокал *для* вина": "un verre *à* vin"}},
+    "до": {"à": {"*до* завтра": "*à* demain"}},
+    "за": {"en": {"Я сделал это *за* пять минут": "Je l’ai fait *en* cinq minutes"}},
+    "из": {
+        "dans": {"пить *из* стракана": "boire *dans* un verre"},
+        "de": {"Мы прибываем *из* Лиля": "Nous arrivons *de* Lille"},
+    },
+    "к": {"à": {"пойду *к* окну": "j'irai à la fenêtre"}},
+    "как": {"en": {"Он вёл себя *как* тиран": "Il a agi *en* tyran"}},
+    "на": {
+        "dans": {"*на* самолёте": "*dans* l’avion"},
+        "en": {
+            "Он предпочитает путешествовать *на* поезде": "Il préfère voyager *en* train",
+        },
+    },
+    "по": {"à": {"с понедельника *по* субботу": "du lundi *au* samedi"}},
+    "с": {
+        "de": {"суп *с* помидорами": "la soupe *de* tomates"},
+        "à": {"обувь *с* высоким каблуком": "chaussures *à* talon haut"},
+    },
+}
 
 
 def get_db() -> tuple[list[Preposition], list[Relation]]:
-    в = Preposition(RU, "в")
-    на = Preposition(RU, "на")
-    к = Preposition(RU, "к")
-    с = Preposition(RU, "с")
-    до = Preposition(RU, "до")
-    по = Preposition(RU, "по")
-    для = Preposition(RU, "для")
-    из = Preposition(RU, "из")
-    за = Preposition(RU, "за")
-    как = Preposition(RU, "как")
+    prepositions = []
+    relations = []
+    for ru, related in data.items():
+        ru_prep = Preposition(RU, ru)
+        prepositions.append(ru_prep)
+        for fr, example in related.items():
+            fr_prep = Preposition(FR, fr)
+            prepositions.append(fr_prep)
 
-    à = Preposition(FR, "à", ("au",))
-    dans = Preposition(FR, "dans")
-    en = Preposition(FR, "en")
-    de = Preposition(FR, "de")
-
-    relations = [
-        _relations(в, à, ("Мы собираемся *в* Ницу", "Nous allons *à* Nice")),
-        _relations(
-            в, dans, ("Положите книги *в* коробку", "Mets les livres *dans* le carton")
-        ),
-        _relations(в, en, ("Он живёт *в* Провансе", "Il habite *en* Provence")),
-        _relations(до, à, ("*до* завтра", "*à* demain")),
-        _relations(по, à, ("с понедельника *по* субботу", "du lundi *au* samedi")),
-        _relations(для, à, ("бокал *для* вина", "un verre *à* vin")),
-        _relations(с, à, ("обувь *с* высоким каблуком", "chaussures *à* talon haut")),
-        _relations(на, dans, ("*на* самолёте", "*dans* l’avion")),
-        _relations(из, dans, ("пить *из* стракана", "boire *dans* un verre")),
-        _relations(
-            за, en, ("Я сделал это *за* пять минут", "Je l’ai fait *en* cinq minutes")
-        ),
-        _relations(
-            на,
-            en,
-            (
-                "Он предпочитает путешествовать *на* поезде",
-                "Il préfère voyager *en* train",
-            ),
-        ),
-        _relations(как, en, ("Он вёл себя *как* тиран", "Il a agi *en* tyran")),
-        _relations(к, à, ("пойду *к* окну", "j'irai à la fenêtre")),
-        _relations(из, de, ("Мы прибываем *из* Лиля", "Nous arrivons *de* Lille")),
-        _relations(с, de, ("суп *с* помидорами", "la soupe *de* tomates")),
-    ]
-
-    return [в, на, к, с, до, по, для, из, за, как, à, dans, en, de], relations
+            relations.append(Relation(ru_prep, fr_prep, tuple(example.items())))
+    return prepositions, relations

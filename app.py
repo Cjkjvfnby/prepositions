@@ -17,7 +17,7 @@ fr_header = ":orange[La liaison entre les prépositions russes et françaises]"
 
 st.header(f"{ru_header} / {fr_header}")
 
-
+# read once per session
 prep, relations = get_db()
 
 

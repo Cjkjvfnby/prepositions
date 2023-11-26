@@ -125,7 +125,7 @@ data: list[_DataItem] = [
         "ru": "на",
         "fr": "en",
         "examples": {
-            "Он предпочитает путешествовать *на* поезде": "Il préfère voyager *en* train"
+            "Он предпочитает путешествовать *на* поезде": "Il préfère voyager *en* train",
         },
     },
     {

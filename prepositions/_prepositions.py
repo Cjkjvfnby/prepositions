@@ -50,17 +50,21 @@ data: list[_DataItem] = [
         "ru": "в",
         "fr": "dans",
         "examples": {
-            "Положите книги *в* коробку": "Mets les livres *dans* le carton",
             "Он сидит *в* кресле": "Il est assis *dans* le fauteuil",
-            "Мы плаваем *в* бассейне": "Nous nageons *dans* la piscine",
-            "Дети играют *в* саду": "Les enfants jouent *dans* le jardin",
+        },
+    },
+    {
+        "ru": "в",
+        "fr": "de",
+        "examples": {
+            "*в* городе": "*de* la ville",
         },
     },
     {
         "ru": "в",
         "fr": "en",
         "examples": {
-            "Он живёт *в* Провансе": "Il habite *en* Provence",
+            "*в* театре": "*en* théâtre",
         },
     },
     {
@@ -71,50 +75,36 @@ data: list[_DataItem] = [
         },
     },
     {"ru": "для", "fr": "à", "examples": {"бокал *для* вина": "un verre *à* vin"}},
-    {
-        "ru": "до",
-        "fr": "à",
-        "examples": {
-            "*до* завтра": "*à* demain",
-        },
-    },
+    {"ru": "до", "fr": "à", "examples": {"*до* завтра": "*à* demain"}},
     {
         "ru": "за",
         "fr": "dans",
         "examples": {
-            "Мы едем *за* город": "Nous partons *dans* la banlieue",
-            "Он спрятался *за* деревом": "Il s'est caché *dans* l'arbre",
             "Мы идем *за* реку": "Nous allons *dans* la rivière",
         },
     },
     {
         "ru": "за",
         "fr": "en",
-        "examples": {
-            "Я сделал это *за* пять минут": "Je l’ai fait *en* cinq minutes",
-        },
+        "examples": {"Я сделал это *за* пять минут": "Je l’ai fait *en* cinq minutes"},
     },
     {
         "ru": "из",
         "fr": "dans",
-        "examples": {
-            "пить *из* стракана": "boire *dans* un verre",
-        },
+        "examples": {"пить *из* стракана": "boire *dans* un verre"},
     },
     {
         "ru": "из",
         "fr": "de",
         "examples": {
-            "Мы прибываем *из* Лиля": "Nous arrivons *de* Lille",
+            "*из* дома": "*De* la maison",
         },
     },
     {
         "ru": "к",
         "fr": "chez",
         "examples": {
-            "Я собираюсь *к* Филипу": "Je vais *chez* Philippe",
             "Я иду *к* Пьеру": "Je vais *chez* Pierre",
-            "Я иду *к* парикмахеру": "Je vais *chez* le coiffeur",
         },
     },
     {
@@ -127,23 +117,18 @@ data: list[_DataItem] = [
     {
         "ru": "как",
         "fr": "en",
-        "examples": {
-            "Он вёл себя *как* тиран": "Il a agi *en* tyran",
-        },
+        "examples": {"Он вёл себя *как* тиран": "Il a agi *en* tyran"},
     },
     {
         "ru": "на",
         "fr": "chez",
-        "examples": {
-            "Он *на* работе": "Il est *chez* son travail",
-        },
+        "examples": {"Он *на* работе": "Il est *chez* son travail"},
     },
     {
         "ru": "на",
         "fr": "dans",
         "examples": {
             "*на* самолёте": "*dans* l’avion",
-            "Он стоит *на* улице": "Il se tient debout *dans* la rue",
             "Девушка сидит *на* лавке": "La fille est assise *dans* le banc",
         },
     },
@@ -155,34 +140,71 @@ data: list[_DataItem] = [
         },
     },
     {
-        "ru": "по",
+        "ru": "на",
         "fr": "à",
         "examples": {
-            "с понедельника *по* субботу": "du lundi *au* samedi",
+            "*на* пляже": "*À* la plage",
         },
+    },
+    {
+        "ru": "по",
+        "fr": "en",
+        "examples": {
+            "*по* дороге": "*En* route",
+        },
+    },
+    {
+        "ru": "по",
+        "fr": "à",
+        "examples": {"с понедельника *по* субботу": "du lundi *au* samedi"},
     },
     {
         "ru": "с",
         "fr": "de",
-        "examples": {
-            "суп *с* помидорами": "la soupe *de* tomates",
-        },
+        "examples": {"суп *с* помидорами": "la soupe *de* tomates"},
     },
     {
         "ru": "с",
         "fr": "à",
-        "examples": {
-            "обувь *с* высоким каблуком": "chaussures *à* talon haut",
-        },
+        "examples": {"обувь *с* высоким каблуком": "chaussures *à* talon haut"},
     },
     {
         "ru": "у",
         "fr": "chez",
-        "examples": {
-            "Я *у* художника": "Je suis *chez* un artiste",
-        },
+        "examples": {"Я *у* художника": "Je suis *chez* un artiste"},
     },
 ]
+
+
+"""
+Chat GPT promt example
+
+
+Для французского предлога de найди мне варианты использования, которые переводятся на русский предложением с предлогом.
+В переводе обязательно должна быть часть речи предлог, если его нет, то такой пример не подходит.
+
+Нужно найти все возможные русские предлоги которые переводятся с заданного французского.
+Пример должны быть отличными друг от друга, один пример для каждого русского предлога.
+
+Результат должен быть оформлен в виде списка на языке Python с форматированием для удобства чтения.
+Все элементы должны иметь хвостовую запятую запятую.
+
+Каждый элемент списка это словарь с тремя ключами.
+
+"ru" со значением русского предлога из перевода
+"fr" со значенем французского предлога
+"examples" словарь с примерами.  Где русский пример является ключом, а французский перевод значением.
+Каждая пара ключ значение должна быть на новой строке.
+
+В примерах нужно убрать точки и предлог обрамить звёздочками.
+
+
+"""
+
+_synonyms = {
+    "de": ("du",),
+    "à": ("au",),
+}
 
 
 def get_db() -> tuple[list[Preposition], list[Relation]]:
@@ -192,7 +214,7 @@ def get_db() -> tuple[list[Preposition], list[Relation]]:
     ] = {}
     for case in data:
         ru_prep = Preposition(RU, case["ru"])
-        fr_prep = Preposition(FR, case["fr"])
+        fr_prep = Preposition(FR, case["fr"], synonyms=_synonyms.get(case["fr"], ()))
         prepositions.add(ru_prep)
         prepositions.add(fr_prep)
 
@@ -212,5 +234,22 @@ if __name__ == "__main__":
         print(r)  # noqa: T201
 
     # Reformat data in order
-    data = sorted(data, key=lambda item: (item["ru"], item["fr"], item["examples"]))
+    data = sorted(
+        data, key=lambda item: (item["ru"], item["fr"], tuple(item["examples"].keys()))
+    )
+
+    deduplicated: dict[tuple[str, str], dict[RuExample, FrExample]] = {}
+    for item in data:
+        ru, fr, examples = item["ru"], item["fr"], item["examples"]
+        deduplicated.setdefault((ru, fr), {}).update(examples)
+
+    data = [
+        {"ru": ru, "fr": fr, "examples": examples}
+        for (ru, fr), examples in deduplicated.items()
+    ]
+
+    data = sorted(
+        data, key=lambda item: (item["ru"], item["fr"], tuple(item["examples"].keys()))
+    )
+
     print(data)  # noqa: T201

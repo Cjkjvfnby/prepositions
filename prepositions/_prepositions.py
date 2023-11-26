@@ -59,15 +59,25 @@ data: list[_DataItem] = [
     {
         "ru": "в",
         "fr": "en",
-        "examples": {"Он живёт *в* Провансе": "Il habite *en* Provence"},
+        "examples": {
+            "Он живёт *в* Провансе": "Il habite *en* Provence",
+        },
     },
     {
         "ru": "в",
         "fr": "à",
-        "examples": {"Мы собираемся *в* Ницу": "Nous allons *à* Nice"},
+        "examples": {
+            "Мы собираемся *в* Ницу": "Nous allons *à* Nice",
+        },
     },
     {"ru": "для", "fr": "à", "examples": {"бокал *для* вина": "un verre *à* vin"}},
-    {"ru": "до", "fr": "à", "examples": {"*до* завтра": "*à* demain"}},
+    {
+        "ru": "до",
+        "fr": "à",
+        "examples": {
+            "*до* завтра": "*à* demain",
+        },
+    },
     {
         "ru": "за",
         "fr": "dans",
@@ -80,17 +90,23 @@ data: list[_DataItem] = [
     {
         "ru": "за",
         "fr": "en",
-        "examples": {"Я сделал это *за* пять минут": "Je l’ai fait *en* cinq minutes"},
+        "examples": {
+            "Я сделал это *за* пять минут": "Je l’ai fait *en* cinq minutes",
+        },
     },
     {
         "ru": "из",
         "fr": "dans",
-        "examples": {"пить *из* стракана": "boire *dans* un verre"},
+        "examples": {
+            "пить *из* стракана": "boire *dans* un verre",
+        },
     },
     {
         "ru": "из",
         "fr": "de",
-        "examples": {"Мы прибываем *из* Лиля": "Nous arrivons *de* Lille"},
+        "examples": {
+            "Мы прибываем *из* Лиля": "Nous arrivons *de* Lille",
+        },
     },
     {
         "ru": "к",
@@ -101,16 +117,26 @@ data: list[_DataItem] = [
             "Я иду *к* парикмахеру": "Je vais *chez* le coiffeur",
         },
     },
-    {"ru": "к", "fr": "à", "examples": {"пойду *к* окну": "j'irai à la fenêtre"}},
+    {
+        "ru": "к",
+        "fr": "à",
+        "examples": {
+            "пойду *к* окну": "j'irai à la fenêtre",
+        },
+    },
     {
         "ru": "как",
         "fr": "en",
-        "examples": {"Он вёл себя *как* тиран": "Il a agi *en* tyran"},
+        "examples": {
+            "Он вёл себя *как* тиран": "Il a agi *en* tyran",
+        },
     },
     {
         "ru": "на",
         "fr": "chez",
-        "examples": {"Он *на* работе": "Il est *chez* son travail"},
+        "examples": {
+            "Он *на* работе": "Il est *chez* son travail",
+        },
     },
     {
         "ru": "на",
@@ -131,22 +157,30 @@ data: list[_DataItem] = [
     {
         "ru": "по",
         "fr": "à",
-        "examples": {"с понедельника *по* субботу": "du lundi *au* samedi"},
+        "examples": {
+            "с понедельника *по* субботу": "du lundi *au* samedi",
+        },
     },
     {
         "ru": "с",
         "fr": "de",
-        "examples": {"суп *с* помидорами": "la soupe *de* tomates"},
+        "examples": {
+            "суп *с* помидорами": "la soupe *de* tomates",
+        },
     },
     {
         "ru": "с",
         "fr": "à",
-        "examples": {"обувь *с* высоким каблуком": "chaussures *à* talon haut"},
+        "examples": {
+            "обувь *с* высоким каблуком": "chaussures *à* talon haut",
+        },
     },
     {
         "ru": "у",
         "fr": "chez",
-        "examples": {"Я *у* художника": "Je suis *chez* un artiste"},
+        "examples": {
+            "Я *у* художника": "Je suis *chez* un artiste",
+        },
     },
 ]
 

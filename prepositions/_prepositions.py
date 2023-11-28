@@ -71,7 +71,7 @@ data: list[_DataItem] = [
         "ru": "в",
         "fr": "à",
         "examples": {
-            "Мы собираемся *в* Ницу": "Nous allons *à* Nice",
+            "Мы собираемся *в* Ниццу": "Nous allons *à* Nice",
         },
     },
     {"ru": "для", "fr": "à", "examples": {"бокал *для* вина": "un verre *à* vin"}},
@@ -80,7 +80,7 @@ data: list[_DataItem] = [
         "ru": "за",
         "fr": "dans",
         "examples": {
-            "Мы идем *за* реку": "Nous allons *dans* la rivière",
+            "мы идем *за* реку": "nous allons *dans* la rivière",
         },
     },
     {
@@ -91,7 +91,7 @@ data: list[_DataItem] = [
     {
         "ru": "из",
         "fr": "dans",
-        "examples": {"пить *из* стракана": "boire *dans* un verre"},
+        "examples": {"пить *из* стакана": "boire *dans* un verre"},
     },
     {
         "ru": "из",

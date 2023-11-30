@@ -49,40 +49,16 @@ data: list[_DataItem] = [
     {
         "ru": "в",
         "fr": "dans",
-        "examples": {
-            "Он сидит *в* кресле": "Il est assis *dans* le fauteuil",
-        },
+        "examples": {"Он сидит *в* кресле": "Il est assis *dans* le fauteuil"},
     },
-    {
-        "ru": "в",
-        "fr": "de",
-        "examples": {
-            "*в* городе": "*de* la ville",
-        },
-    },
-    {
-        "ru": "в",
-        "fr": "en",
-        "examples": {
-            "*в* театре": "*en* théâtre",
-        },
-    },
+    {"ru": "в", "fr": "en", "examples": {"Я *в* Европе": "Je suis *en* Europe"}},
     {
         "ru": "в",
         "fr": "à",
-        "examples": {
-            "Мы собираемся *в* Ниццу": "Nous allons *à* Nice",
-        },
+        "examples": {"Мы собираемся *в* Ниццу": "Nous allons *à* Nice"},
     },
     {"ru": "для", "fr": "à", "examples": {"бокал *для* вина": "un verre *à* vin"}},
     {"ru": "до", "fr": "à", "examples": {"*до* завтра": "*à* demain"}},
-    {
-        "ru": "за",
-        "fr": "dans",
-        "examples": {
-            "мы идем *за* реку": "nous allons *dans* la rivière",
-        },
-    },
     {
         "ru": "за",
         "fr": "en",
@@ -93,27 +69,14 @@ data: list[_DataItem] = [
         "fr": "dans",
         "examples": {"пить *из* стакана": "boire *dans* un verre"},
     },
+    {"ru": "из", "fr": "de", "examples": {"*из* города": "*de* la ville"}},
     {
         "ru": "из",
-        "fr": "de",
-        "examples": {
-            "*из* дома": "*De* la maison",
-        },
+        "fr": "en",
+        "examples": {"Сделанно *из* дерева": "Fabriqué *en* bois"},
     },
-    {
-        "ru": "к",
-        "fr": "chez",
-        "examples": {
-            "Я иду *к* Пьеру": "Je vais *chez* Pierre",
-        },
-    },
-    {
-        "ru": "к",
-        "fr": "à",
-        "examples": {
-            "пойду *к* окну": "j'irai à la fenêtre",
-        },
-    },
+    {"ru": "к", "fr": "chez", "examples": {"Я иду *к* Пьеру": "Je vais *chez* Pierre"}},
+    {"ru": "к", "fr": "à", "examples": {"Пойду *к* окну": "J'irai à la fenêtre"}},
     {
         "ru": "как",
         "fr": "en",
@@ -126,31 +89,18 @@ data: list[_DataItem] = [
     },
     {
         "ru": "на",
-        "fr": "dans",
-        "examples": {
-            "*на* самолёте": "*dans* l’avion",
-            "Девушка сидит *на* лавке": "La fille est assise *dans* le banc",
-        },
-    },
-    {
-        "ru": "на",
         "fr": "en",
         "examples": {
-            "Он предпочитает путешествовать *на* поезде": "Il préfère voyager *en* train",
+            "Он предпочитает путешествовать *на* поезде": "Il préfère voyager *en* train"
         },
     },
+    {"ru": "на", "fr": "à", "examples": {"*на* пляже": "*à* la plage"}},
+    {"ru": "о", "fr": "de", "examples": {"фильм *о* войне": "un film *de* guerre"}},
     {
-        "ru": "на",
-        "fr": "à",
+        "ru": "от",
+        "fr": "de",
         "examples": {
-            "*на* пляже": "*À* la plage",
-        },
-    },
-    {
-        "ru": "по",
-        "fr": "en",
-        "examples": {
-            "*по* дороге": "*En* route",
+            "Мы были в 5 километрах *от* пляжа": "Nous sommes à 5 km *de* la plage"
         },
     },
     {
@@ -161,7 +111,10 @@ data: list[_DataItem] = [
     {
         "ru": "с",
         "fr": "de",
-        "examples": {"суп *с* помидорами": "la soupe *de* tomates"},
+        "examples": {
+            "стакан *с* вином": "un verre *de* vin",
+            "*с* понедельника по субботу": "*du* lundi au samedi",
+        },
     },
     {
         "ru": "с",

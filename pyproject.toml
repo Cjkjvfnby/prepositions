@@ -17,7 +17,8 @@ ignore = [
     "D203",
     "FLY002", # fix produces invalid code https://github.com/astral-sh/ruff/issues/5150
     "G004", # logging with f string is ok
-    "ISC001", "COM812", "E501" # handled by ruff formatter
+    "ISC001", "COM812", "E501", # handled by ruff formatter
+    "S101", # asserts are ok here
 ]
 target-version = "py311"
 

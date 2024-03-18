@@ -63,6 +63,9 @@ data: dict[RuExample, FrExample] = {
     "*с* понедельника по субботу": "*du* lundi au samedi",
     "обувь *с* высоким каблуком": "chaussures *à* talon haut",
     "Я *у* художника": "Je suis *chez* un artiste",
+    "стоит 3 евро *за* кило": "coûter 3 euros *par* kilo",
+    "зарабатывать 15 евро *в* час": "gagner 15 euros *par* heure",
+    "выйти *через* окно": "sortir *par* la fenêtre",
 }
 
 

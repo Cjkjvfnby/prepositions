@@ -3,6 +3,7 @@ Module to build graph with prepositions.
 
 Utilize https://github.com/ChrisDelClea/streamlit-agraph
 """
+
 import re
 from collections.abc import Iterable
 from io import StringIO

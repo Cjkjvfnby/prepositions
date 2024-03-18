@@ -9,6 +9,7 @@ https://visjs.github.io/vis-network/examples/network/other/html-in-titles.html
 
 This is not universal fix, only methods that are used in my code are patched.
 """
+
 from hashlib import md5
 from typing import Any
 

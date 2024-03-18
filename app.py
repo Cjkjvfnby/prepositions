@@ -1,6 +1,7 @@
 """
 Streamlit application that visualize relations between Russian and French prepositions.
 """
+
 from collections import Counter
 
 import streamlit as st

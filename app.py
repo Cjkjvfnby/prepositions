@@ -23,7 +23,7 @@ prep, relations = get_db()
 
 
 def _ru_prep() -> list[str]:
-    return [p.preposition for p in prep if p.lang == RU]
+    return sorted({p.preposition for p in prep if p.lang == RU})
 
 
 def _count_preposition_used(prep: str) -> str:

@@ -66,6 +66,7 @@ data: dict[RuExample, FrExample] = {
     "стоит 3 евро *за* кило": "coûter 3 euros *par* kilo",
     "зарабатывать 15 евро *в* час": "gagner 15 euros *par* heure",
     "выйти *через* окно": "sortir *par* la fenêtre",
+    "Это проблема *с* французами": "C’est un problème *chez* les Français",
 }
 
 
